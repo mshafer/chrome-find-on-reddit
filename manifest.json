@@ -1,0 +1,20 @@
+{
+  "name": "Find on Reddit",
+  "description": "Search for a link on Reddit",
+  "version": "0.1",
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["find_on_reddit.js"]
+  },
+  "manifest_version": 2,
+  "icons": {
+    "48": "icons/reddit-96.png",
+    "128": "icons/reddit-144.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/reddit-96.png"
+  }
+}
