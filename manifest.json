@@ -1,7 +1,7 @@
 {
   "name": "Find on Reddit",
   "description": "Search for a link on Reddit",
-  "version": "0.1",
+  "version": "0.1.1",
   "permissions": [
     "contextMenus",
     "tabs"
