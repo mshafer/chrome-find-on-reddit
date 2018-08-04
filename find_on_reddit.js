@@ -1,11 +1,12 @@
 function searchRedditForUrl(url) {
-    var redditSearchUrl = 'https://www.reddit.com/search?q=url%3A' + encodeURIComponent(url);
+    const searchQuery = 'url:' + url;
+    const redditSearchUrl = 'https://www.reddit.com/search?q=' + encodeURIComponent(searchQuery);
     console.log("Opening Reddit search URL: " + redditSearchUrl);
     chrome.tabs.create({ url: redditSearchUrl });
 }
 
 function handleContextMenuClick(info, tab) {
-    var linkUrl = info["linkUrl"];
+    const linkUrl = info["linkUrl"];
     console.log("User used context menu on link with URL: " + linkUrl);
     searchRedditForUrl(linkUrl);
 }
@@ -17,7 +18,7 @@ function handleBrowserButtonClick(tab) {
 
 chrome.contextMenus.create({
     "title": "Find on Reddit",
-    "contexts":["link"],
+    "contexts": ["link"],
     "onclick": handleContextMenuClick
 });
 
